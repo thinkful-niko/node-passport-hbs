@@ -1,0 +1,17 @@
+<div class="container">
+	<h1>Profile Page</h1>
+
+	{{#if user}}
+	    username: {{user.username}}
+	{{/if}}
+	<form action="/newFormation" method="post">
+	  <input type="text" name="name" value="Formation">
+	  <input type="submit" value="Submit">
+	</form>
+
+	{{#each formations}}
+		<ul>
+			<li><a href="/formation/{{this._id}}">{{this.name}}</a></li>
+		</ul>
+	{{/each}} 
+</div>
